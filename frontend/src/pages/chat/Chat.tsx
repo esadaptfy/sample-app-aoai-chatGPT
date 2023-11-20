@@ -579,7 +579,7 @@ const Chat = () => {
                                     className={styles.chatIcon}
                                     aria-hidden="true"
                                 />
-                                <h1 className={styles.chatEmptyStateTitle}>Ask me anything about your SHV data!</h1>
+                                <h1 className={styles.chatEmptyStateTitle}>Ask me anything about your data!</h1>
                                 <h2 className={styles.chatEmptyStateSubtitle}>Answers are based on documents provided on SharePoint.</h2>
                             </Stack>
                         ) : (
@@ -690,7 +690,7 @@ const Chat = () => {
                             </Stack>
                             <QuestionInput
                                 clearOnSend
-                                placeholder="Type a new question..."
+                                placeholder="..."
                                 disabled={isLoading}
                                 onSend={(question, id) => {
                                     appStateContext?.state.isCosmosDBAvailable?.cosmosDB ? makeApiRequestWithCosmosDB(question, id) : makeApiRequestWithoutCosmosDB(question, id)
